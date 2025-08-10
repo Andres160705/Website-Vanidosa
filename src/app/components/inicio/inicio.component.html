@@ -1,0 +1,84 @@
+<!-- Encabezado / Menú -->
+<header>
+  <nav>
+    <div class="container-title">
+      <img src="assets/Logo Vanidosa.jpg" alt="Logo Vanidosa">
+    <h1>Vanidosa</h1>
+    </div>
+    <ul class="menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Sección principal: Hero -->
+<section id="inicio" class="hero">
+  <h2>Resalta tu belleza con uñas únicas y Peinados unicos</h2>
+  <div class="galeria-grid">
+    <ul class="container">
+      <li *ngFor="let servicio of listaSlides">
+        <img [src]="servicio.img" alt="ServicioImg">
+        <div class="content">
+          <span>
+            <h2>Uñas acrilicas</h2>
+          </span>
+          <p>Uñas acrilicas</p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!--Servicios-->
+<section id="servicios">
+  <h1>Nuestros servicios</h1>
+  <ul class="servicio" *ngFor="let servicio of listaSlides">
+    <li>
+      <div>
+        <span>
+          <h2>{{servicio.Title}}</h2>
+        </span>
+        <div class="container-img">
+          <img [src]="servicio.img" [alt]="servicio.alt">
+        </div>
+        <br>
+        <p>{{servicio.Description}}</p>
+      </div>
+    </li>
+  </ul>
+
+</section>
+<!--Fin seccion de Servicios-->
+
+<!-- contacto -->
+<section id="contacto">
+  <p>Agenda tu cita y transforma tu estilo con diseños exclusivos.</p>
+  <a href="#contacto" class="btn">Reservar ahora</a>
+  <p>O escríbenos al WhatsApp: <a href="https://wa.me/573001234567">+57 300 123 4567</a></p>
+</section>
+<!-- Fin seccion de contacto -->
+
+<!-- Testimonios -->
+<section id="testimonios">
+  <h2>Lo que dicen nuestras clientas</h2>
+  <blockquote>
+    “Me encantaron mis uñas, ¡súper profesionales!” – Laura M.
+  </blockquote>
+  <blockquote>
+    “El mejor salón de uñas, 100% recomendado.” – Karen G.
+  </blockquote>
+</section>
+<!-- Fin seccion de Testimonios -->
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Vanidosa Nails. Todos los derechos reservados.</p>
+  <p>Síguenos en
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a>
+  </p>
+</footer>
+<!--Fin Footer -->
