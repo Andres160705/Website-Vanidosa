@@ -1,0 +1,178 @@
+
+/* Establece reglas base limpias */
+* {
+  box-sizing: border-box;
+}
+
+/* Inicio de la header estilo */
+nav {
+  background-color: #ffb6c1;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: auto;
+}
+
+h1 {
+  margin: 0;
+  color: #880e4f;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li{
+display: block;
+padding: 20px 20px;
+}
+.menu li {
+  padding: 14px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #6a1b9a;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu :hover :not(li:hover) {
+    opacity: .1;
+  color: #4a148c;
+}
+
+/* Secciones */
+section {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.container-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra el título */
+  padding: 20px 20px;
+  background: #F8C8DC;
+}
+
+.container-title img {
+  position: absolute;
+  top: 50%;
+  left: 20px; /* pegado al borde izquierdo */
+  transform: translateY(-50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.container-title h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #6A1E55;
+  text-align: center;
+}
+/* Fin de la header estilo */
+
+/* Inico estilos citas */
+
+.page-citas {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  min-height: 100vh;       /* ocupa toda la pantalla */
+}
+.contenedor-citas {
+  background-color: #f8bbd0;
+  color: #4a148c;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+}
+
+.contenedor-citas h2 {
+  margin-top: 0;
+  color: #880e4f;
+  text-align: center;
+}
+
+/* Fin de los estilos citas */
+
+/* Inicio estilos Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  color: #6a1b9a;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4a148c;
+}
+
+/* Fin estilos Form */
+
+/* Inicio estlos footer */
+
+footer {
+  margin-top: 3%;
+  background-color: #880e4f;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer a {
+  color: #ffccff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Fin estilos footer */

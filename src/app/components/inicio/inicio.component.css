@@ -12,6 +12,7 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: auto;
 }
 
 h1 {
@@ -63,33 +64,31 @@ p {
 }
 
 .container-title {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  gap: 16px;
-  padding: 20px;
-  background: rgb(255, 30, 30);
-  position: relative;
+  justify-content: center; /* centra el título */
+  padding: 20px 20px;
+  background: #F8C8DC;
 }
 
 .container-title img {
-  width: 95px;
-  height: 95px;
-  border-radius: 55%;
-  object-fit: cover;
   position: absolute;
-  left: 50px; /* Ajusta según tu padding */
   top: 50%;
+  left: 20px; /* pegado al borde izquierdo */
   transform: translateY(-50%);
-  margin-right: 0;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .container-title h1 {
-  flex: 1;
-  text-align: center;
-  font-size: 70px;
+  font-size: 3.5rem;
   margin: 0;
+  color: #6A1E55;
+  text-align: center;
 }
 
 /* Servicio en Columna */
@@ -278,6 +277,137 @@ opacity: 1;
 }
 
 /* Testimonios */
+
+.button-testimonios {
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.testimonio {
+  background: #f8bbd0;          /* fondo suave */
+  color: #4a148c;               /* texto morado */
+  border-radius: 15px;          /* bordes redondeados */
+  padding: 20px;                /* espacio interno */
+  min-height: 200px;            /* altura uniforme */
+  max-width: 400px;             /* ancho máximo */
+  margin: 0 auto;               /* centrar */
+  display: flex;                /* usar flexbox */
+  flex-direction: column;       /* texto arriba, cliente abajo */
+  justify-content: center;      /* centrar contenido vertical */
+  align-items: center;          /* centrar contenido horizontal */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* sombra elegante */
+  width: 90%;
+}
+
+.testimonio .texto {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-style: italic;           
+}
+
+.testimonio .cliente {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Carrusel */
+.carrousel {
+  width: 30%;       /* Ajusta aquí el ancho del carrusel */
+  max-width: 900px; /* Máximo tamaño en pantallas grandes */
+  margin: 0 auto;   /* Centrado horizontal */
+  padding: 20px;    /* Espaciado interno */
+  border-radius: 15px;
+  background-color: #eb78a0;
+  margin-bottom: 20px;
+}
+.carrousel p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.carrousel h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a148c;
+  margin: 0;
+}
+
+
+@media (max-width: 600px) {
+  .carrousel {
+    width: 100% !important;
+    padding: 5px !important;
+    box-shadow: none; /* opcional: quitar sombra en móvil */
+  }
+  .carrousel div[ngxSlickItem] {
+    min-height: 180px;
+    padding: 15px;
+  }
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flechas */
+.slick-prev, .slick-next {
+  font-size: 0; /* oculta texto interno */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #c2185b;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -50px; /* posición flecha izquierda */
+}
+
+.slick-next {
+  right: -50px; /* posición flecha derecha */
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 1;
+  color: white;
+}
+
+/* Dots de abajo */
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #c2185b;
+  opacity: 0.8;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4a148c;
+  opacity: 1;
+}
+
+
 blockquote {
   font-style: italic;
   margin: 15px auto;
@@ -287,6 +417,7 @@ blockquote {
 
 /* Footer */
 footer {
+  margin-top: 3%;
   background-color: #880e4f;
   color: white;
   padding: 20px;
@@ -302,3 +433,5 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+

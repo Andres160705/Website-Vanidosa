@@ -20,12 +20,6 @@
     <ul class="container">
       <li *ngFor="let servicio of listaSlides">
         <img [src]="servicio.img" alt="ServicioImg">
-        <div class="content">
-          <span>
-            <h2>Uñas acrilicas</h2>
-          </span>
-          <p>Uñas acrilicas</p>
-        </div>
       </li>
     </ul>
 
@@ -49,28 +43,31 @@
       </div>
     </li>
   </ul>
-
 </section>
 <!--Fin seccion de Servicios-->
 
 <!-- contacto -->
 <section id="contacto">
   <p>Agenda tu cita y transforma tu estilo con diseños exclusivos.</p>
-  <a href="#contacto" class="btn">Reservar ahora</a>
-  <p>O escríbenos al WhatsApp: <a href="https://wa.me/573001234567">+57 300 123 4567</a></p>
+    <button class="button-testimonios" (click)="avanzarCitas()">Reservar ahora</button>
+  <p>O escríbenos al WhatsApp: <a href="https://wa.me/573168108854?text=Hola%20quiero%20agendar%20mi%20cita">+57 316 810 8854</a></p>
 </section>
 <!-- Fin seccion de contacto -->
 
+
 <!-- Testimonios -->
-<section id="testimonios">
-  <h2>Lo que dicen nuestras clientas</h2>
-  <blockquote>
-    “Me encantaron mis uñas, ¡súper profesionales!” – Laura M.
-  </blockquote>
-  <blockquote>
-    “El mejor salón de uñas, 100% recomendado.” – Karen G.
-  </blockquote>
-</section>
+ <section id="testimonios">   
+<ngx-slick-carousel class="carrousel" #slickModal="slick-carousel" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let test of listaTestimonios" >
+        <div class="testimonio">
+          <blockquote>
+        <p>{{ test.texto }}</p>
+        <h4>- {{ test.cliente }}</h4>
+        </blockquote>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    </section>
 <!-- Fin seccion de Testimonios -->
 
 <!-- Footer -->
